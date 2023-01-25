@@ -1,0 +1,11 @@
+package com.stack;
+
+public class Stack {
+
+	int stack[] = new int[10];
+	int position = 0;
+
+	public void pop(int data) {
+		
+	}
+}

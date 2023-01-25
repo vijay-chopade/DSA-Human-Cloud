@@ -1,0 +1,56 @@
+package com.stack;
+
+public class Stack {
+	{
+		setSize();
+	}
+	private int size;
+	int stack[] = new int[size];
+	private int position = 0;
+	private void setSize() {
+		size(10);
+	}
+	public void size(int size) {
+		size = (size == 0)?10:size;
+		
+	}
+
+	public void push(int data) {
+		stack[position] = data;
+		position++;
+	}
+
+	public String pop() {
+		String pop;
+		position--;
+		stack[position] = 0;
+		pop = "" + stack[position];
+		return pop;
+	}
+
+	public void fatch() {
+		System.out.println(stack[position - 1]);
+	}
+
+	public void show() {
+		for (int i = 0; i < position; i++) {
+			System.out.print(stack[i] + " ");
+		}
+		System.out.println();
+	}
+
+	public int length() {
+		return position;
+	}
+
+	public boolean pick(int data) {
+		boolean check = false;
+		for (int s : stack) {
+			if (s == data) {
+				check = true;
+			}
+		}
+		return check;
+	}
+
+}

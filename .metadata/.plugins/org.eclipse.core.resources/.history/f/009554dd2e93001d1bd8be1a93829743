@@ -1,0 +1,7 @@
+package com.stack;
+
+public class Stack {
+
+	int stack[] = new int[10];
+	
+}

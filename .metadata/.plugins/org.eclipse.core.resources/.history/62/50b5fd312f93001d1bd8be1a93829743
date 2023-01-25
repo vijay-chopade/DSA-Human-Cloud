@@ -1,0 +1,11 @@
+package com.stack;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Stack list = new Stack();
+		list.pop(7);
+		list.pop(4);
+		list.pop(9);
+	}
+}

@@ -1,0 +1,32 @@
+package com.stack;
+
+public class Stack {
+
+	int stack[] = new int[10];
+	private int position = 0;
+
+	public void push(int data) {
+		stack[position] = data;
+		position++;
+	}
+	public String pop() {
+		String pop;
+		position--;
+		stack[position] = 0;
+		pop=""+stack[position];
+		return pop;
+	}
+	
+	public void fatch() {
+		System.out.println(stack[position-1]);
+	}
+	
+	
+	
+	public void show() {
+		for(int i=0;i<position-1;i++) {
+			System.out.print(stack[i]+" ");
+		}
+		System.out.println();
+	}
+}

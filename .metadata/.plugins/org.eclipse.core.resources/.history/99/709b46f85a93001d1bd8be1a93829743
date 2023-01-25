@@ -1,0 +1,57 @@
+package com.stack;
+
+public class Stack {
+	
+	private int size = 5;
+	int stack[] = new int[this.size];
+	private int position = 0;
+	
+	public boolean isEmpty() {
+		return position<=0;
+	}
+	public void push(int data) {
+		if(position == size) {
+			System.out.println("tank is full!");
+		}else {
+			stack[position] = data;
+			position++;
+		}
+	}
+
+	public int pop() {
+		int pop;
+		if(position <=0) {
+			System.out.println("tank is Empty.");
+		}
+		position--;
+		stack[position] = 0;
+		pop = stack[position];
+		return pop;
+	}
+
+	public int  fatch() {
+		return stack[position - 1];
+	}
+
+	public void show() {
+		for (int i = 0; i < position; i++) {
+			System.out.print(stack[i] + " ");
+		}
+		System.out.println();
+	}
+
+	public int length() {
+		return position;
+	}
+
+	public boolean pick(int data) {
+		boolean check = false;
+		for (int s : stack) {
+			if (s == data) {
+				check = true;
+			}
+		}
+		return check;
+	}
+
+}

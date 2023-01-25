@@ -1,0 +1,3 @@
+INDEX VERSION 1.131
+/home/smv/eclipse-workspace/DSA/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4266032297.index
+/project_lecture_api/src/main/java

@@ -1,0 +1,27 @@
+package com.stack;
+
+public class Stack {
+
+	int stack[] = new int[10];
+	private int position = 0;
+
+	public void push(int data) {
+		stack[position] = data;
+		position++;
+	}
+	public String pop() {
+		String pop;
+		position--;
+		stack[position] = 0;
+		return pop;
+	}
+	
+	
+	
+	public void show() {
+		for(int show : stack) {
+			System.out.print(show+" ");
+		}
+		System.out.println();
+	}
+}

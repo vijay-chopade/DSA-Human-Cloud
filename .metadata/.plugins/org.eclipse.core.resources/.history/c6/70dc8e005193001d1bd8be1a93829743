@@ -1,0 +1,15 @@
+package com.stack;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Stack list = new Stack();
+		list.push(7);
+		list.push(4);
+		list.push(9);
+		list.show();
+		list.pop();
+		list.show();
+		list.fatch();
+	}
+}
