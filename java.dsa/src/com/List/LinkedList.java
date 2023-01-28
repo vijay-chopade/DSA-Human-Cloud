@@ -77,6 +77,7 @@ public class LinkedList {
 					break;
 				}else { 
 					System.out.println(node.data);
+//					deleteAt(i);
 				}
 		}
 	}

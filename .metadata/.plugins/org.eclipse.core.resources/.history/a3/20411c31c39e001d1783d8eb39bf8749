@@ -1,0 +1,161 @@
+package com.UserAPI;
+
+import java.util.Scanner;
+
+import com.List.LinkedList;
+import com.Queue.Queue;
+import com.Stack.Stack;
+
+public class UserAPI {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		String cases = "";
+		String inCases = "";
+		boolean abc = true;
+		System.out.println("\n1.LinkedList\n2.Queue\n3.Stack\n4.Exit\n\nSelect Operation: ");
+		int op1 = sc.nextInt();
+		int input;
+//		
+		while (abc) {
+			boolean back = true;
+			switch (op1) {
+			case 1:
+					cases = "LinkedList";
+					LinkedList ll = new LinkedList();
+					System.out.print(
+							"\n1.insert()\n2.insertStart()\n3.insertAt()\n4.deleteAt()\n5.deleteAll()\n6.show()\n\nSelect Operation: ");
+					while (back) {
+						int op2 = sc.nextInt();
+					switch (op2) {
+					case 1:
+						inCases = " insert()";
+						System.out.print("Enter value = ");
+						ll.insert(sc.nextInt());
+						break;
+					case 2:
+						inCases = " insertStart()";
+						System.out.print("Enter value = ");
+						ll.insertAtStart(sc.nextInt());
+						break;
+					case 3:
+						inCases = " insertAt()";
+						System.out.print("Enter value = ");
+						int val = sc.nextInt();
+						System.out.print("On index = ");
+						int index = sc.nextInt();
+						ll.insertAt(val, index);
+						break;
+					case 4:
+						inCases = " deleteAt()";
+						System.out.print("index no = ");
+						ll.deleteAt(sc.nextInt());
+						break;
+					case 5:
+						inCases = " deleteAll()";
+						ll.deleteAll();
+						System.out.print("Data Deleted");
+						break;
+					case 6:
+						inCases = " show()";
+						ll.show();
+						break;
+					case 0:
+						back = false;
+						break;
+					default:
+						System.out.println("In LinkedList NO Such Option Found!");
+					}
+				}
+				break;
+			case 2:
+					cases = "Queue";
+					Queue que = new Queue();
+					System.out.println("\n1.enQue()\n2.deQue()\n3.show()\n0.Back Manu\n\nSelect Operation: ");
+					while (back) {
+						int op3 = sc.nextInt();
+
+					switch (op3) {
+					case 1:
+						inCases = " enqueue()";
+						System.out.print("Enter value = ");
+						input = sc.nextInt();
+						que.enqueue(input);
+						break;
+					case 2:
+						inCases = " dequeue()";
+						System.out.println(que.dequeue());
+						break;
+					case 3:
+						inCases = " show()";
+						que.show();
+						break;
+					case 0:
+						back = false;
+						break;
+					default:
+						System.out.println("In Queue NO Such Option Found!");
+					}
+				}
+				break;
+			case 3:
+				while (back) {
+					cases = "Stack";
+					Stack st = new Stack();
+					System.out.println(
+							"\n1.push()\n2.pop()\n3.fatch()\n4.show()\n5.size()\n6.isEmpty()\n7capacity()\n8.pick()\n\nSelect Operation: ");
+					System.out.print("Select Option: ");
+					int op4 = sc.nextInt();
+					switch (op4) {
+					case 1:
+						inCases = " push()";
+						System.out.print("Enter value = ");
+						input = sc.nextInt();
+						st.push(input);
+						break;
+					case 2:
+						inCases = " pop()";
+						System.out.println(st.pop());
+						break;
+					case 3:
+						inCases = " fatch()";
+						System.out.println(st.fatch());
+						break;
+					case 4:
+						inCases = " show()";
+						st.show();
+						break;
+					case 5:
+						inCases = " size()";
+						System.out.println(st.size());
+						break;
+					case 6:
+						inCases = " isEmpty()";
+						System.out.println(st.isEmpty());
+						break;
+					case 7:
+						inCases = " capacity()";
+						System.out.println(st.capacity());
+						break;
+					case 8:
+						inCases = " pick()";
+						System.out.print("Enter value: ");
+						System.out.println(st.pick(sc.nextInt()));
+					case 0:
+						back = false;
+						break;
+					}
+				}
+				break;
+			case 4:
+				inCases = "Null";
+				abc = false;
+				break;
+			default:
+				cases = "Option Not Found!";
+			}
+		}
+		System.err.println("You operation on '" + cases + "' class using '" + inCases + "' method");
+
+	}
+}
