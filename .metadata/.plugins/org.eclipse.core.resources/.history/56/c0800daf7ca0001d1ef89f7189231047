@@ -1,0 +1,24 @@
+package com.Array;
+
+public class Runner {
+
+//	@SuppressWarnings("unchecked")
+	public static void main(String[] args) {
+		Array arr = new Array();
+		
+//		int [] c = new int[6];
+//		Array [] arr = new Array[3];
+//		arr[0] = new Array(1);
+//		arr[1] = new Array(2);
+//		arr[2] = new Array(3);
+		
+//		arr[3] = new Array(4);
+		
+		arr.add(3);
+		arr.add(1);
+		arr.add(2);
+//		for(int j = 0;j<arr.length;j++) {
+//			System.out.println(arr[j].toString());
+//		}
+	}
+}

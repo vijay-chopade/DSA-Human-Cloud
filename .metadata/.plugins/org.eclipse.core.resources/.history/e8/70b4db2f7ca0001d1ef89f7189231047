@@ -1,0 +1,26 @@
+package com.Array;
+
+public class Array{
+
+	private int i ;
+	private int capacity = 10;
+	private int index = 0;
+	public Array () {
+		i=1;
+		System.err.println("is a default constructor!");
+	}
+	public Array(int  val) {
+		i = val;
+		System.err.println("is a param. constructor!");
+	}
+	
+	
+	
+	public void add(int data) {
+		Array [] arr = new Array[capacity];
+//		for(int k = 0;k<arr.length;k++) {
+//			arr[k]new Array<Integer>(data);
+//		}
+	}
+	
+}

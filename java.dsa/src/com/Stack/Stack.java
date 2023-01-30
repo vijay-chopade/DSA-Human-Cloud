@@ -26,17 +26,17 @@ public class Stack {
 
 	}
 
-	public int pop() {
+	public void pop() {
 		int pop = 0;
 		if (position <= 0)
 			System.out.println("tank is Empty.");
 		else {
 			position--;
-			stack[position] = 0;
 			pop = stack[position];
+			stack[position] = 0;
 			shrink();
+			System.out.println(pop);
 		}
-		return pop;
 	}
 
 	private void shrink() {
@@ -48,8 +48,11 @@ public class Stack {
 		stack = newStack;
 	}
 
-	public int fatch() {
-		return stack[position - 1];
+	public void fatch() {
+		if (isEmpty())
+			System.out.println("tank is Empty.");
+		else
+			System.out.println(stack[position - 1]);
 	}
 
 	public void show() {

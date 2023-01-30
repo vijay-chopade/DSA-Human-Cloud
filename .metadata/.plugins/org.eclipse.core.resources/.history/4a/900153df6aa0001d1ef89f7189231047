@@ -1,0 +1,14 @@
+package com.Array;
+
+public class Array {
+
+	private int i ;
+	public Array () {
+		i=1;
+		System.err.println("is a constructor!");
+	}
+	
+//	public void test() {
+//		int [] b = new int [4];
+//	}
+}

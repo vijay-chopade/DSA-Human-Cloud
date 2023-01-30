@@ -1,0 +1,17 @@
+package com.Array;
+
+public class Array<T>{
+
+	private T i ;
+	public Array () {
+		i=1;
+		System.err.println("is a constructor!");
+	}
+	public Array(T val) {
+		
+	}
+	
+//	public void test() {
+//		int [] b = new int [4];
+//	}
+}

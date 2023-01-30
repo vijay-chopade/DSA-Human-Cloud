@@ -1,0 +1,16 @@
+package com.Array;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		Array arr = new Array();
+		
+		Array [] arr1 = new Array[3];
+		
+		int [] c = new int[6];
+		c[0] = 1;
+		c[1] = 2;
+		c[3] = 3;
+		System.out.println(c.length);
+	}
+}

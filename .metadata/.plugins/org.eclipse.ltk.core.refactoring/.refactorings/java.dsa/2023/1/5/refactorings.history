@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.UserAPI.UserAPI&apos; to &apos;APIRunner&apos;&#x0A;- Original project: &apos;java.dsa&apos;&#x0A;- Original element: &apos;com.UserAPI.UserAPI&apos;&#x0A;- Renamed element: &apos;com.UserAPI.APIRunner&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;UserAPI&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.UserAPI{UserAPI.java[UserAPI" matchStrategy="1" name="APIRunner" qualified="false" references="true" similarDeclarations="false" stamp="1675058674374" textual="false" version="1.0"/>
+</session>
