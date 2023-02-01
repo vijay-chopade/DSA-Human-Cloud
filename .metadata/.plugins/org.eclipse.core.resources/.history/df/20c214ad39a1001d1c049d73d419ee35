@@ -1,0 +1,13 @@
+package com.ServerAPI;
+
+import java.util.ArrayList;
+
+public class Runner {
+
+	public static void main(String[] args) {
+		ArrayList<Menu> m = null;
+		m.add(new Menu(1,"LinkedList"));
+		
+	}
+
+}

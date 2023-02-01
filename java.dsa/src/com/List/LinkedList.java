@@ -19,6 +19,9 @@ public class LinkedList {
 			}
 			n.next = node;
 		}
+		System.out.println(data + " is added.");
+//		show();
+		
 ////		System.err.println("End(node): "+"Data: "+node.data+" ,Address: "+node.next);
 //		System.err.println("End(head): "+"Data: "+head.data+" ,Address: "+head.next);
 	}
@@ -29,6 +32,8 @@ public class LinkedList {
 		node.next = null;
 		node.next = head;
 		head = node;
+		System.out.println(data + " is added at starting.");
+//		show();
 	}
 
 	public void insertAt(int index, int data) {
@@ -44,9 +49,11 @@ public class LinkedList {
 				for (int i = 1; i < index; i++) {
 					n = n.next;
 				}
-			}
 			node.next = n.next;
 			n.next = node;
+		}
+			System.out.println(data + " is added on index "+ index);
+//			show();
 		} catch (Exception e) {
 			System.out.println("no such index found!");
 		}
@@ -66,6 +73,8 @@ public class LinkedList {
 					for (int i = 0; i < index - 1; i++) {
 						n = n.next;
 					}
+					System.out.println(n.data + " is deleted.");
+//					show();
 					n1 = n.next;
 					n.next = n1.next;
 					n1 = null;
@@ -77,7 +86,7 @@ public class LinkedList {
 		}
 	}
 
-	public void deleteAll() {
+	private void deleteAll() {
 		if (isEmpty())
 			System.err.println("List is Empty.\n");
 		else {
@@ -99,24 +108,25 @@ public class LinkedList {
 			System.err.println("List is Empty.\n");
 		} else {
 			Node node = head;
+			System.err.print("List : ");
 			while (node.next != null) {
 //			System.err.println(node.data+" "+node.next);
 				System.out.print(node.data + ", ");
 				node = node.next;
 			}
-//			System.out.print(node.data);
+			System.out.print(node.data);
 			System.out.println();
 		}
 	}
 
-	public boolean isEmpty() {
+	private boolean isEmpty() {
 		if (head != null)
 			return false;
 		else
 			return true;
 	}
 
-	public int size() {
+	private int size() {
 		Node node = head;
 		int k = 1;
 		if (isEmpty()) {

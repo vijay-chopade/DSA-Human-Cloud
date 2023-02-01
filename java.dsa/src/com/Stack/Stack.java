@@ -6,7 +6,7 @@ public class Stack {
 	private int stack[] = new int[capacity];
 	private int position = 0;
 
-	public boolean isEmpty() {
+	private boolean isEmpty() {
 		return position <= 0;
 	}
 
@@ -36,6 +36,7 @@ public class Stack {
 			stack[position] = 0;
 			shrink();
 			System.out.println(pop);
+//			show();
 		}
 	}
 
@@ -51,32 +52,36 @@ public class Stack {
 	public void fatch() {
 		if (isEmpty())
 			System.out.println("tank is Empty.");
-		else
+		else {
 			System.out.println(stack[position - 1]);
+//			show();
+		}
 	}
 
 	public void show() {
 		if (position <= 0)
 			System.out.print("Tank is empty.");
 		else
+			System.err.print("Stack : ");
 			for (int i = 0; i < position; i++)
 				System.out.print(stack[i] + " ");
 		System.out.println();
 	}
 
-	public int size() {
+	private int size() {
 		return position + 1;
 	}
 
-	public int capacity() {
+	private int capacity() {
 		return capacity;
 	}
 
-	public boolean pick(int data) {
+	public boolean peek(int data) {
 		boolean check = false;
 		for (int s : stack)
 			if (s == data)
 				check = true;
+		System.out.println(check);
 		return check;
 	}
 

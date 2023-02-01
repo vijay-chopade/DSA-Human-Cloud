@@ -1,0 +1,39 @@
+package com.ServerAPI;
+
+public class MenuItem {
+	int index;
+	String opration;
+
+//	Menu menu;
+	public MenuItem() {
+		super();
+	}
+
+	public MenuItem(int index, String opration) {
+		super();
+		this.index = index;
+		this.opration = opration;
+	}
+
+	public int getIndex() {
+		return index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
+	}
+
+	public String getOpration() {
+		return opration;
+	}
+
+	public void setOpration(String opration) {
+		this.opration = opration;
+	}
+
+	@Override
+	public String toString() {
+		return "ManuItem [index=" + index + ", opration=" + opration + "]";
+	}
+
+}

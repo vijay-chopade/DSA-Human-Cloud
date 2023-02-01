@@ -11,6 +11,7 @@ public class Queue {
 //		System.out.println(rear);
 		rear = (rear + 1) % length;
 		size++;
+		show();
 	}
 
 	public void dequeue() {
@@ -18,17 +19,25 @@ public class Queue {
 			System.out.print("Queue is Empty.\n");
 		} else {
 			int data = queue[front];
+//			queue[front]=0;
+//			System.out.println(data);
+			for(int x=0,y=1;x<queue.length-1;x++,y++) {
+				queue[x]+=queue[y];
+				queue[y]= queue[x]-queue[y];
+				queue[x]= queue[x]-queue[y];
+			}
 			front = (front + 1) % 5;
 			size--;
+			show();
 			reduce();
-			System.out.println(data);
 		}
 	}
 
-	public void show() {
+	private void show() {
 		if (isEmpty())
 			System.out.print("Queue is Empty.");
 		else
+			System.err.print("Queue : ");
 			for (int i = 0; i < size; i++) {
 //				System.out.print(queue[(front + i) % 5] + " ");
 				System.out.print(queue[i] + " ");
@@ -36,14 +45,14 @@ public class Queue {
 		System.out.println();
 	}
 
-	public boolean isEmpty() {
+	private boolean isEmpty() {
 		if (size == 0)
 			return true;
 		else
 			return false;
 	}
 
-	public int size() {
+	private int size() {
 		return rear;
 	}
 

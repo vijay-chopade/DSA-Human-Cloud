@@ -1,0 +1,49 @@
+package com.ServerAPI;
+
+public class Menu extends MenuItem {
+	private int index;
+	private String ds;
+	private Menu menu;
+
+	public Menu() {
+	}
+
+	public Menu(int index, String ds) {
+		super();
+		this.index = index;
+		this.ds = ds;
+	}
+
+	public Menu(int index, String ds, Menu menu) {
+		super();
+		this.index = index;
+		this.ds = ds;
+		this.menu = menu;
+	}
+
+	public int getIndex() {
+		return index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
+	}
+
+	public String getDs() {
+		return ds;
+	}
+
+	public void setDs(String ds) {
+		this.ds = ds;
+	}
+
+	public Menu getMenu() {
+		return menu;
+	}
+
+	@Override
+	public String toString() {
+		return "Menu [index=" + index + ", ds=" + ds + "]";
+	}
+
+}

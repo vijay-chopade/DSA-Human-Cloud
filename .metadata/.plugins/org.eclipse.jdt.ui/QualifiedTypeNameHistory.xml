@@ -7,4 +7,5 @@
     <fullyQualifiedTypeName name="com.List.LinkedList"/>
     <fullyQualifiedTypeName name="com.Queue.Queue"/>
     <fullyQualifiedTypeName name="com.Stack.Stack"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.Size2DSyntax"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,11 @@
+package com.ServerAPI;
+
+public class MenuItem {
+	private int id;
+	private String name;
+	private Menu menu;
+
+	public MenuItem() {
+		super();
+	}
+}

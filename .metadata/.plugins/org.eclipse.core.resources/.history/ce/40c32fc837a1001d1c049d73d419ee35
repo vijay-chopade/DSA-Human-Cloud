@@ -1,0 +1,8 @@
+package com.ServerAPI;
+
+public class ManuItem extends Menu {
+	int index;
+	String opration;
+//	Menu menu;
+
+}

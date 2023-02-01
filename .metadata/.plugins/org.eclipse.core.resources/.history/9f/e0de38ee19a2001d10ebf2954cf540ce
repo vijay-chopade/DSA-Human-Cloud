@@ -1,0 +1,29 @@
+package com.Queue;
+
+public class Runner {
+
+	public static void main(String[] args) {
+
+		Queue q = new Queue();
+		q.enqueue(67);
+		q.enqueue(2);
+		q.enqueue(5);
+		q.enqueue(8);
+		q.enqueue(9);
+		q.dequeue();
+		q.dequeue();
+		q.dequeue();
+//		queue.show();
+//		System.out.println(queue.dequeue());
+////		queue.show();
+////		System.out.println(queue.dequeue());
+////		queue.show();
+////		System.out.println(queue.dequeue());
+////		queue.show();
+////		System.out.println(queue.dequeue());
+//		queue.enqueue(9);
+//		queue.enqueue(9);
+//		queue.enqueue(9);
+//		queue.show();
+	}
+}

@@ -1,0 +1,90 @@
+package com.ServerAPI;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Runner {
+	
+	
+	public static void main(String[] args) {
+		Runner.listData();
+	}
+	
+	
+	
+	public static void listData() {
+//		Menu m = new Menu(1, "LinkedList",new MenuItem(1,"pop()",new Menu()));
+//		Menu m = new Menu(1, "LinkedList");
+//		Menu m = new Menu();
+		ArrayList<Menu> menulist = new ArrayList<>();
+		ArrayList<MenuItem> list = new ArrayList<>();
+//		MenuItem mi = new MenuItem();
+		list.add(new MenuItem(1, "pop()", new Menu()));
+		list.add(new MenuItem(2, "push()", new Menu()));
+		list.add(new MenuItem(3, "peek()", new Menu()));
+
+		ArrayList<MenuItem> stack = new ArrayList<>();
+		stack.add(new MenuItem(1, "spop()", new Menu()));
+		stack.add(new MenuItem(2, "spush()", new Menu()));
+		stack.add(new MenuItem(3, "speek()", new Menu()));
+
+		ArrayList<MenuItem> Queue = new ArrayList<>();
+		Queue.add(new MenuItem(1, "qpop()", new Menu()));
+		Queue.add(new MenuItem(2, "qpush()", new Menu()));
+		Queue.add(new MenuItem(3, "qpeek()", new Menu()));
+
+		menulist.add(new Menu(1, "LinkedList", list));
+		menulist.add(new Menu(2, "Stack", stack));
+		menulist.add(new Menu(3, "Queue", Queue));
+
+		Iterator<Menu> ite = menulist.iterator();
+		while (ite.hasNext()) {
+			Menu m = ite.next();
+			System.out.println(m.getId() + " " + m.getName());
+		}
+//		Scanner sc = new Scanner(System.in);
+//		if(sc.nextInt() == 1) {
+//			
+//		}
+
+	}
+	public static void forShow(ArrayList list) {
+		Iterator<Menu> ite = list.iterator();
+		while (ite.hasNext()) {
+			Menu m = ite.next();
+			System.out.println(m.getId() + " " + m.getName());
+		}
+	}
+
+}
+
+//private static Scanner sc = new Scanner(System.in);
+
+//public static void DataStructure() {
+//	ArrayList<Menu> m = new ArrayList<>();
+//	m.add(new Menu(1, "LinkedList"));
+//	m.add(new Menu(2, "Queue"));
+//	m.add(new Menu(3, "Stack"));
+//	for (Menu x : m) {
+//		System.out.println(x.getIndex() + " " + x.getDs() + " " + x.getMenu());
+//	}
+//	System.out.print("Enter input: ");
+//	opration();
+//}
+//
+//public static void opration() {
+//	int op = Runner.sc.nextInt();
+//	ArrayList<MenuItem> mi = new ArrayList<>();
+//	mi.add(new MenuItem(1, "push()"));
+//	mi.add(new MenuItem(2, "pop()"));
+//	mi.add(new MenuItem(3, "peek()"));
+//	for (MenuItem x : mi) {
+//		System.out.println(x.getIndex() + " " + x.getOpration());
+//	}
+//
+//}
+
+//public static void main(String[] args) {
+//	Runner.DataStructure();
+//}

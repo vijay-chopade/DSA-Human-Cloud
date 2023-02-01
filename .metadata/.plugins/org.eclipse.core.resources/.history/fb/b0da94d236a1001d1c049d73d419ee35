@@ -1,0 +1,7 @@
+package com.ServerAPI;
+
+public class Menu {
+	int index;
+	String ds;
+
+}

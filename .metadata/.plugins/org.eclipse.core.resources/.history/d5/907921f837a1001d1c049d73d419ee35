@@ -1,0 +1,8 @@
+package com.ServerAPI;
+
+public class Runner {
+	public static void main(String[] args) {
+		ManuItem mi = new ManuItem();
+	}
+
+}

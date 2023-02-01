@@ -1,0 +1,149 @@
+package com.ServerAPI;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import com.List.LinkedList;
+
+public class Menu extends MenuItem {
+	private int id;
+	private String name;
+	private ArrayList<MenuItem> mi = new ArrayList<>();
+
+	public Menu() {
+
+	}
+
+	public Menu(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public void addMI(MenuItem item) {
+		item.setParent(this);
+		mi.add(item);
+	}
+
+	public List<MenuItem> getMI() {
+		return mi;
+	}
+
+	public void display() {
+		System.out.println(id + " : " + name);
+	}
+
+	public void display1() {
+		getMI().stream().forEach(e -> System.out.println(e.getId() + " : " + e.getName()));
+		System.out.println();
+	}
+
+	public void display2() {
+		System.out.println(">>");
+		for (int i = 0; i <= 5; i++) {
+			getMI().stream().forEach(e -> System.out.println(e.getId() + " : " + e.getName()));
+			System.out.println(id + " : " + name);
+		}
+		System.out.println("<<");
+
+	}
+
+	public Menu(int id, String name, ArrayList<MenuItem> menuItem) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.mi = menuItem;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "MenuItem [id=" + id + ", name=" + name + "]";
+	}
+
+	public static void setList() {
+		Scanner sc = new Scanner(System.in);
+		boolean whileCon1 = true;
+		int i = 0;
+		while (whileCon1) {
+			boolean whileCon2 = true;
+			Menu listMenu = new Menu(1, "LinkedList");
+			Menu queMenu = new Menu(2, "Queue");
+			Menu stackMenu = new Menu(3, "Stack");
+			Menu backMenu = new Menu(4, "Exit");
+			listMenu.display();
+			queMenu.display();
+			stackMenu.display();
+			backMenu.display();
+			System.out.println();
+			while (whileCon2) {
+				System.out.print("Enter no: ");
+				i = sc.nextInt();
+
+				if (i == 1) {
+					listMenu.addMI(new MenuItem(1, "insert()"));
+					listMenu.addMI(new MenuItem(2, "insertStart()"));
+					listMenu.addMI(new MenuItem(3, "insertAt()"));
+					listMenu.addMI(new MenuItem(4, "deleteAt()"));
+					listMenu.addMI(new MenuItem(5, "deleteAll()"));
+					listMenu.addMI(new MenuItem(6, "show()"));
+					listMenu.addMI(new MenuItem(7, "size()"));
+					listMenu.addMI(new MenuItem(8, "isEmpty()"));
+					listMenu.addMI(new MenuItem(0, "Back to Main Menu"));
+					listMenu.display1();
+					while (true) {
+						int input = sc.nextInt();
+						LinkedList ll = new LinkedList();
+						switch (input) {
+						case 1:
+							ll.insert(sc.nextInt());
+							break;
+						}
+					}
+
+				} else if (i == 2) {
+					queMenu.addMI(new MenuItem(1, "enQue()"));
+					queMenu.addMI(new MenuItem(2, "deQue()"));
+					queMenu.addMI(new MenuItem(3, "show()"));
+					queMenu.addMI(new MenuItem(4, "size()"));
+					queMenu.addMI(new MenuItem(5, "isEmpty()"));
+					queMenu.addMI(new MenuItem(0, "Back to Main Menu"));
+					queMenu.display1();
+				} else if (i == 3) {
+					stackMenu.addMI(new MenuItem(1, "Push"));
+					stackMenu.addMI(new MenuItem(2, "pop()"));
+					stackMenu.addMI(new MenuItem(3, "fatch()"));
+					stackMenu.addMI(new MenuItem(4, "show()"));
+					stackMenu.addMI(new MenuItem(5, "Size()"));
+					stackMenu.addMI(new MenuItem(6, "isEmpty()"));
+					stackMenu.addMI(new MenuItem(7, "capacity()"));
+					stackMenu.addMI(new MenuItem(8, "peek()"));
+					stackMenu.addMI(new MenuItem(0, "Back to Main Menu"));
+					stackMenu.display1();
+				} else if (i == 0) {
+					whileCon2 = false;
+					break;
+				} else if (i == 4) {
+					whileCon1 = false;
+					break;
+				}
+			}
+		}
+		sc.close();
+	}
+}

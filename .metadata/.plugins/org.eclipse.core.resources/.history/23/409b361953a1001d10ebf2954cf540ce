@@ -1,0 +1,64 @@
+package com.ServerAPI;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Menu extends MenuItem {
+	private int id;
+	private String name;
+	private ArrayList<MenuItem> mi = new ArrayList<>();
+
+	public Menu() {
+	}
+
+	public Menu(int id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	public void addMI(MenuItem item){
+		item.setParent(this);
+		mi.add(item);
+	}
+	
+	public List<MenuItem> getMI(){
+		return mi;
+	}
+	
+	public Menu(int id, String name, ArrayList<MenuItem> menuItem) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.mi = menuItem;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+//	public Menu getMenu() {
+//		return menu;
+//	}
+//
+//	public void setMenu(Menu menu) {
+//		this.menu = menu;
+//	}
+
+	@Override
+	public String toString() {
+		return "MenuItem [id=" + id + ", name=" + name + "]";
+	}
+}

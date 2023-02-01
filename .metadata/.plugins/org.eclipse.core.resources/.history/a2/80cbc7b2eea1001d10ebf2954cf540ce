@@ -1,0 +1,76 @@
+package com.ServerAPI;
+
+import java.util.Scanner;
+
+public class Runner {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		Runner.setList();
+		Menu n = new Menu();
+		
+//		int input = sc.nextInt();
+//		if (input == 1) {
+			n.display2();
+//		} else if (input == 2) {
+//
+//		} else if (input == 3) {
+//
+//		}
+
+	}
+
+	public static void getList() {
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	public static void setList() {
+		Menu listMenu = new Menu(1, "LinkedList");
+		listMenu.addMI(new MenuItem(1, "insert()"));
+		listMenu.addMI(new MenuItem(2, "insertStart()"));
+		listMenu.addMI(new MenuItem(3, "insertAt()"));
+		listMenu.addMI(new MenuItem(4, "deleteAt()"));
+		listMenu.addMI(new MenuItem(5, "deleteAll()"));
+		listMenu.addMI(new MenuItem(6, "show()"));
+		listMenu.addMI(new MenuItem(7, "size()"));
+		listMenu.addMI(new MenuItem(8, "isEmpty()"));
+		listMenu.addMI(new MenuItem(0, "Back to Main Menu"));
+//		listMenu.display1();
+
+		Menu queMenu = new Menu(2, "Queue");
+		queMenu.addMI(new MenuItem(1, "enQue()"));
+		queMenu.addMI(new MenuItem(2, "deQue()"));
+		queMenu.addMI(new MenuItem(3, "show()"));
+		queMenu.addMI(new MenuItem(4, "size()"));
+		queMenu.addMI(new MenuItem(5, "isEmpty()"));
+		queMenu.addMI(new MenuItem(0, "Back to Main Menu"));
+//		queMenu.display1();
+
+		Menu stackMenu = new Menu(3, "Stack");
+		stackMenu.addMI(new MenuItem(1, "Push"));
+		stackMenu.addMI(new MenuItem(2, "pop()"));
+		stackMenu.addMI(new MenuItem(3, "fatch()"));
+		stackMenu.addMI(new MenuItem(4, "show()"));
+		stackMenu.addMI(new MenuItem(5, "Size()"));
+		stackMenu.addMI(new MenuItem(6, "isEmpty()"));
+		stackMenu.addMI(new MenuItem(7, "capacity()"));
+		stackMenu.addMI(new MenuItem(8, "peek()"));
+		stackMenu.addMI(new MenuItem(0, "Back to Main Menu"));
+		stackMenu.display1();
+
+	}
+}

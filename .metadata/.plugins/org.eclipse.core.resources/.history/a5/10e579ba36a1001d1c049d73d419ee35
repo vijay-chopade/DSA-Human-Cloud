@@ -1,0 +1,8 @@
+package com.ServerAPI;
+
+public class ManuItem {
+	int index;
+	String opration;
+	
+
+}
