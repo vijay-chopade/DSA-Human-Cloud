@@ -8,121 +8,12 @@ import com.Stack.Stack;
 
 public class ManuController {
 
-	public static boolean oprationLL() {
-		Scanner ss = new Scanner(System.in);
-		boolean whileCon3 = true;
-		LinkedList ll = new LinkedList();
-		while (whileCon3) {
-			System.out.print("Enter Method No: ");
-			int input = ss.nextInt();
-			int data = 0;
-			int index = 0;
-			switch (input) {
-			case 1:
-				System.out.print("Enter Data : ");
-				ll.insert(ss.nextInt());
-				break;
-			case 2:
-				System.out.print("Enter Data : ");
-				ll.insertAtStart(ss.nextInt());
-				break;
-			case 3:
-				System.out.print("Enter Data : ");
-				data = ss.nextInt();
-				System.out.print("Enter Index : ");
-				index = ss.nextInt();
-				ll.insertAt(index, data);
-				break;
-			case 4:
-				System.out.print("Enter Index : ");
-				index = ss.nextInt();
-				ll.deleteAt(index);
-				break;
-			case 5:
-				ll.show();
-				break;
-			case 0:
-				whileCon3 = false;
-				break;
-			}
-			System.out.println();
-		}
-		if (whileCon3)
-			return true;
-		else
-			return false;
-//		ss.close();
-	}
-
-	public static boolean oprationQL() {
-		Scanner ss = new Scanner(System.in);
-		boolean whileCon3 = true;
-		Queue ql = new Queue();
-		while (whileCon3) {
-			System.out.print("Enter Method No: ");
-			int input = ss.nextInt();
-			switch (input) {
-			case 1:
-				System.out.print("Enter Data : ");
-				ql.enqueue(ss.nextInt());
-				break;
-			case 2:
-				ql.dequeue();
-				break;
-			
-			case 0:
-				whileCon3 = false;
-				break;
-			}
-			System.out.println();
-		}
-		if (whileCon3)
-			return true;
-		else
-			return false;
-//		ss.close();
-	}
-
-	public static boolean oprationSL() {
-		Scanner ss = new Scanner(System.in);
-		boolean whileCon3 = true;
-		Stack sl = new Stack();
-		while (whileCon3) {
-			System.out.print("Enter Method No: ");
-			int input = ss.nextInt();
-			switch (input) {
-			case 1:
-				System.out.print("Enter Data : ");
-				sl.push(ss.nextInt());
-				break;
-			case 2:
-				sl.pop();
-				break;
-			case 3:
-				System.out.print("Enter Data : ");
-				sl.peek(ss.nextInt());
-				break;
-			case 4:
-				sl.fatch();
-				break;
-			case 5:
-				sl.show();
-				break;
-			case 0:
-				whileCon3 = false;
-				break;
-			}
-			System.out.println();
-		}
-		if (whileCon3)
-			return true;
-		else
-			return false;
-//		ss.close();
-	}
+	static Stack sl = new Stack();
+	static LinkedList ll = new LinkedList();
+	static Queue ql = new Queue();
 
 	public static void setList() {
-		Scanner sc = new Scanner(System.in);
+		Scanner s4 = new Scanner(System.in);
 		boolean whileCon1 = true;
 		int i = 0;
 		while (whileCon1) {
@@ -138,7 +29,7 @@ public class ManuController {
 			System.out.println();
 			while (whileCon2) {
 				System.out.print("Enter DSA No: ");
-				i = sc.nextInt();
+				i = s4.nextInt();
 
 				if (i == 1) {
 					listMenu.addMI(new MenuItem(1, "insert()"));
@@ -176,6 +67,132 @@ public class ManuController {
 			}
 		}
 		System.err.println("\nEnd >> ");
-		sc.close();
+//		s4.close();
+	}
+
+	public static boolean oprationLL() {
+		Scanner s1 = new Scanner(System.in);
+		boolean whileCon3 = true;
+		while (whileCon3) {
+			System.out.print("Enter Method No: ");
+			int input = s1.nextInt();
+			int data = 0;
+			int index = 0;
+			switch (input) {
+			case 1:
+				System.out.print("Enter Data : ");
+				ll.insert(s1.nextInt());
+				break;
+			case 2:
+				System.out.print("Enter Data : ");
+				ll.insertAtStart(s1.nextInt());
+				break;
+			case 3:
+				System.out.print("Enter Data : ");
+				data = s1.nextInt();
+				System.out.print("Enter Index : ");
+				index = s1.nextInt();
+				ll.insertAt(index, data);
+				break;
+			case 4:
+				System.out.print("Enter Index : ");
+				index = s1.nextInt();
+				ll.deleteAt(index);
+				break;
+			case 5:
+				ll.show();
+				break;
+			case 0:
+				whileCon3 = false;
+				break;
+			}
+			whileCon3 = permition(input);
+		}
+//		s1.close();
+		if (whileCon3)
+			return true;
+		else
+			return false;
+	}
+
+	public static boolean oprationQL() {
+		Scanner s2 = new Scanner(System.in);
+		boolean whileCon3 = true;
+		while (whileCon3) {
+			System.out.print("Enter Method No: ");
+			int input = s2.nextInt();
+			switch (input) {
+			case 1:
+				System.out.print("Enter Data : ");
+				ql.enqueue(s2.nextInt());
+				break;
+			case 2:
+				ql.dequeue();
+				break;
+
+			case 0:
+				whileCon3 = false;
+				break;
+			}
+			whileCon3 = permition(input);
+//			System.out.println();
+		}
+//		s2.close();
+		if (whileCon3)
+			return true;
+		else
+			return false;
+	}
+
+	public static boolean oprationSL() {
+		Scanner s3 = new Scanner(System.in);
+		boolean whileCon3 = true;
+		while (whileCon3) {
+			System.out.print("Enter Method No: ");
+			int input = s3.nextInt();
+			switch (input) {
+			case 1:
+				System.out.print("Enter Data : ");
+				sl.push(s3.nextInt());
+				break;
+			case 2:
+				sl.pop();
+				break;
+			case 3:
+				System.out.print("Enter Data : ");
+				sl.peek(s3.nextInt());
+				break;
+			case 4:
+				sl.fatch();
+				break;
+			case 5:
+				sl.show();
+				break;
+			case 0:
+				whileCon3 = false;
+				break;
+			}
+
+			whileCon3 = permition(input);
+//			System.out.println();
+		}
+//		s3.close();
+		if (whileCon3)
+			return true;
+		else
+			return false;
+	}
+
+	private static boolean permition(int a) {
+		if (a > 0 && a < 6) {
+			Scanner s5 = new Scanner(System.in);
+			System.out.print("Do You want to continue 'y/n' : ");
+			String ans = s5.nextLine();
+			System.out.println();//
+			return (ans.equalsIgnoreCase("y")) ? true : false;
+		} else {
+			return false;
+		}
+//		s5.close();
 	}
 }

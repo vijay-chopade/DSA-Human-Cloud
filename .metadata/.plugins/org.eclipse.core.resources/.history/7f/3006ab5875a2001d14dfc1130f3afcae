@@ -1,0 +1,62 @@
+package com.hc_Scaler_program;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Menu extends MenuItem {
+	Scanner sc = new Scanner(System.in);
+	private static boolean isLevelOne = true;
+	List<MenuItem> items = new ArrayList<>();
+
+	public Menu() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Menu(String s) {
+		super(0, s);
+		// TODO Auto-generated constructor stub
+	}
+
+	public Menu(int mi_index, String name) {
+
+		super(mi_index, name);
+		addMenuItem(new MenuItem(0, "Back"));
+		// TODO Auto-generated constructor stub
+	}
+
+	public List<MenuItem> getItems() {
+		return items;
+	}
+
+	public void addMenuItem(MenuItem item) {
+		item.setParent(this);
+		items.add(item);
+	}
+
+	public void displayMi() {
+		if (isLevelOne) {
+			isLevelOne = false;
+			items.forEach(e -> e.display()); 		// use to show DSA manu
+			isLevelOne = true;
+			System.out.println("Enter choice..!");
+			int choice = sc.nextInt();
+			if (choice == 0) {	// use to check validation
+				System.out.println("Invalid choice..!");
+				displayMi();
+			} else {
+				MenuItem mi = getItems().stream().filter(e -> e.getMi_index() == choice).findFirst().orElse(null);
+				if (mi == null) {	// check second validation
+					System.out.println("Invalid input..!");
+					displayMi();
+				} else if (mi instanceof Menu) {
+					((Menu) mi).getItems().forEach(e -> e.display());		//this line for get methods list
+//					// write code here
+////					System.out.println(display().);
+				}
+			}
+		}
+	}
+
+}

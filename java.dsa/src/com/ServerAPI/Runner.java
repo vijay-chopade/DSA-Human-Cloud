@@ -1,12 +1,13 @@
 package com.ServerAPI;
 
+import com.hc_Scaler_program.MenuDrivenApp;
 
 public class Runner {
 
 	public static void main(String[] args) {
-//		System.out.println("hello");
-		ManuController.setList();
-
+//		ManuController.setList();
+		MenuDrivenApp.setList();
+		
 	}
 
 }

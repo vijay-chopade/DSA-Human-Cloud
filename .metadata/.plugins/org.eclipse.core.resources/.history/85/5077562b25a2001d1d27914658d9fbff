@@ -1,0 +1,22 @@
+package com.hc_Scaler_program;
+
+public class MenuDrivenApp {
+
+	public static void main(String[] args) {
+		Menu mainMenu = new Menu("Data Structure");
+
+		Menu stackMenu = new Menu(1, "Stack");
+		Menu qMenu = new Menu(2, "Queue");
+		Menu listMenu = new Menu(3, "linked List");
+
+		mainMenu.addMenuItem(stackMenu);
+		mainMenu.addMenuItem(qMenu);
+		mainMenu.addMenuItem(listMenu);
+
+		stackMenu.addMenuItem(new MenuItem(1, "Push"));
+		stackMenu.addMenuItem(new MenuItem(2, "Pop"));
+		stackMenu.addMenuItem(new MenuItem(3, "Peek"));
+
+		mainMenu.displayMi();
+	}
+}

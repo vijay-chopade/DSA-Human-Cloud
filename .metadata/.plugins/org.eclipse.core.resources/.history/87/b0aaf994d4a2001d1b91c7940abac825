@@ -1,0 +1,39 @@
+package com.hc_Scaler_program;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.*;
+import java.util.TreeSet;
+
+//import com.List.LinkedList;
+//import com.Queue.Queue;
+//import com.Stack.Stack;
+
+public class Menu extends MenuItem {
+	List<MenuItem> items = new ArrayList<>();
+
+	public Menu() {
+		super();
+	}
+
+	public Menu(String s) {
+		super(0, s);
+	}
+
+	public Menu(int mi_index, String name) {
+
+		super(mi_index, name);
+		addMenuItem(new MenuItem(0, "Back"));
+	}
+
+	public List<MenuItem> getItems() {
+		return items;
+	}
+
+	public void addMenuItem(MenuItem item) {
+		item.setParent(this);
+		items.add(item);
+	}
+
+}

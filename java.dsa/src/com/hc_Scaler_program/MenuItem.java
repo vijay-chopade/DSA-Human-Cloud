@@ -1,0 +1,49 @@
+package com.hc_Scaler_program;
+
+public class MenuItem {
+
+	private int mi_index;
+	private String name;
+	private MenuItem parent;
+
+	public MenuItem(int mi_index, String name) {
+		super();
+		this.mi_index = mi_index;
+		this.name = name;
+	}
+
+	public MenuItem() {
+		super();
+	}
+
+	public int getMi_index() {
+		return mi_index;
+	}
+
+	public void setMi_index(int mi_index) {
+		this.mi_index = mi_index;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public MenuItem getParent() {
+		return parent;
+	}
+
+	public void setParent(MenuItem parent) {
+		this.parent = parent;
+	}
+
+	public void display() {
+		System.out.println(mi_index + " " + name);
+	}
+	public Menu display1() {
+		return new Menu(mi_index, name);
+	}
+}

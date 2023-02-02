@@ -74,7 +74,6 @@ public class LinkedList {
 						n = n.next;
 					}
 					System.out.println(n.data + " is deleted.");
-//					show();
 					n1 = n.next;
 					n.next = n1.next;
 					n1 = null;
